@@ -16,6 +16,7 @@ export class ProductDetailComponent {
   isExpanded = signal<boolean>(false);
   private cartService = inject(CartService);
   modal = inject(ModalService);
+  
   textDescription = input<string>(
     'Es un medicamento que contiene: paracetamol que funciona para evitar que los mensajes de dolor lleguen al cerebro, también actúa en el cerebro para reducir la fiebre. La fenilefrina es un descongestionante nasal y la clorfenamina pertenece a un grupo de medicamentos llamados antihistamínicos que ayudan a reducir los síntomas de la alergia como secreción nasal, estornudos y ojos llorosos.'
   );
