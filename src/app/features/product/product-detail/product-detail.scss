@@ -1,0 +1,52 @@
+.product-detail-page {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  .carousel-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .carousel-header {
+      display: flex;
+      justify-content: space-between;
+
+      .carousel-actions {
+        display: flex;
+        gap: 8px;
+
+        .carousel-button {
+          width: 32px;
+          height: 32px;
+          background-color: #E4E8F0;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+
+          &.active {
+            background-color: #17A15B;
+          }
+        }
+      }
+    }
+
+    .carousel {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      justify-content: start;
+      width: 100%;
+    }
+
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+}

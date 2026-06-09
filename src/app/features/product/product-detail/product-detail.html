@@ -1,0 +1,33 @@
+<main class="product-detail-page container">
+
+    @if (product(); as productDetail) {
+        <app-product-detail-component [product]="productDetail">
+
+        </app-product-detail-component>
+    }
+
+    <section>
+        <ui-accordion></ui-accordion>
+    </section>
+    <section class="carousel-container">
+        <div class="carousel-header">
+            <div class="carousel-actions">
+                <ui-text>Lo más buscado</ui-text>
+                <ui-text>Mostrar más</ui-text>
+            </div>
+            <div class="carousel-actions">
+                <button class="carousel-button" (click)="scrollLeft()">
+                    <ui-icon name="cheveronLeft" color="#98A4BF" width="16" height="16"></ui-icon>
+                </button>
+                <button class="carousel-button active" (click)="scrollRight()">
+                    <ui-icon name="cheveronRight" color="#ffffff" width="16" height="16"></ui-icon>
+                </button>
+            </div>
+        </div>
+        <div #carousel class="carousel">
+            @for (item of productList; track item.id; let idx = $index) {
+            <app-product-item [product]="item"></app-product-item>
+            }
+        </div>
+    </section>
+</main>
